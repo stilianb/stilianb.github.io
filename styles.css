@@ -27,6 +27,10 @@
   --crust: #181926;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--crust);
   color: var(--text);
@@ -36,12 +40,15 @@ body {
 
 .hero-banner {
   margin: 1rem;
+  padding: 2rem;
+  max-width: 80vw;
 }
 
 .page {
   background-color: var(--base);
   border-top: 2px solid var(--mantle);
   padding: 1rem;
+  height: 90vh;
 }
 
 .button {
@@ -50,6 +57,7 @@ body {
   border-radius: 0.5rem;
   padding: 0.5rem;
   color: var(--text);
+  text-decoration: none;
 }
 
 .button:hover {
@@ -68,7 +76,6 @@ body {
 
 #hero-banner-name-wrapper {
   display: flex;
-  flex-wrap: wrap;
   gap: 1rem;
   font-size: 1.4rem;
   align-items: center;
@@ -81,10 +88,11 @@ body {
 
 #hero-banner-subtext {
   padding-left: 2rem;
-  max-width: 70vw
 }
 
-#my-work-btn {
-  margin-top: 1rem;
+#btn-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
 }
 
