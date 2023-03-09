@@ -48,7 +48,6 @@ body {
   background-color: var(--base);
   border-top: 2px solid var(--mantle);
   padding: 1rem;
-  height: 90vh;
 }
 
 .button {
@@ -63,6 +62,80 @@ body {
 .button:hover {
   background-color: var(--surface1);
   cursor: pointer;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.panel {
+  background-color: var(--surface0);
+  border-radius: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+}
+
+.slider-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.slider {
+  background-color: var(--surface1);
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider-fill {
+  border-radius: 0.5rem;
+  color: var(--base);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.slider-percent {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.tool {
+  display: flex;
+}
+
+#tool-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#html-slider {
+  background-color: var(--sky);
+  width: 80%;
+}
+
+#js-slider {
+  background-color: var(--sapphire);
+  width: 70%;
+}
+
+#lua-slider {
+  background-color: var(--teal);
+  width: 60%;
+}
+
+#about-panel {
+  width: 100%;
+}
+
+#experience-panel {
+  min-width: fit-content;
+  flex-grow: 1;
 }
 
 #intro-name {
@@ -92,7 +165,7 @@ body {
 
 #btn-wrapper {
   display: flex;
-  justify-content: center;
   padding-top: 1rem;
+  padding-left: 1rem;
 }
 
