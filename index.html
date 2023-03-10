@@ -6,105 +6,65 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="../styles.css" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/5dffb3fca8.js" crossorigin="anonymous"></script>
+  <script defer src="https://kit.fontawesome.com/5dffb3fca8.js"></script>
+  <script defer src="../index.js"></script>
 </head>
 
 <body>
-  <div class="hero-banner">
-    <div id="intro-name">
-      <div id="hero-banner-intro-text">Hi there,</div>
-      <div id="hero-banner-name-wrapper">
-        <div id="im">I'm</div>
-        <div id="Stilian">Stilian</div>
+  <nav>
+    <a href="#home" class="nav-item">Home</a>
+    <a href="#about" class="nav-item">About</a>
+    <a href="#work" class="nav-item">Work</a>
+    <a href="#contact" class="nav-item">Contact</a>
+  </nav>
+  <div class="page" id="home">
+    <div class="panel" id="landing-content">
+      <div id="landing-content">
+        <h1>Hi, I'm Stilian</h1>
+        <p>a webdev based out of colorado</p>
       </div>
-      <div id="hero-banner-subtext">a webdev based out of Colorado.</div>
+      <div class="socials">
+        <a href="" class="button" id="contact-btn">Contact Me</a>
+        <a href="" class="button" id="linkedin-btn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="" class="button" id="github-btn"><i class="fa-brands fa-github"></i></a>
+        <a href="" class="button" id="codepen-btn"><i class="fa-brands fa-codepen"></i></a>
+      </div>
     </div>
-    <div id="btn-wrapper">
-      <a href="#projects" id="my-work-btn" class="button">Check out my work</a>
+    <div class="panel" id="image-panel">
+      <p class="wip-text">WIP</p>
     </div>
   </div>
-  <div id="about" class="page">
-    <div class="wrapper">
-      <div id="about-panel" class="panel">
-        <h2 id="about-header">A little about me,</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur 
-        adipiscing elit, sed do eiusmod tempor 
-        incididunt ut labore et dolore magna
-        aliqua. Ut enim ad minim veniam, quis 
-        nostrud exercitation ullamco laboris nisi 
-        ut aliquip ex ea commodo consequat. 
-        Duis aute irure dolor in reprehenderit in 
-        voluptate velit esse cillum dolore eu 
-        fugiat nulla pariatur. Excepteur sint 
-        occaecat cupidatat non proident, sunt in 
-        culpa qui officia deserunt mollit anim id 
-        est laborum.</p>
+  <div class="page" id="work">
+    <div class="panel">
+      <h3>CliqueBait</h3>
+      <div class="project-goto">
+        <a href="" class="button">See more</a>
       </div>
-      <div id="experience-panel" class="panel">
-        <h2 id="experience-text">Experience</h2>
-        <div class="slider-group">
-          <div class="slider">
-            <div class="slider-fill" id="html-slider">
-              <p class="slider-text">html/css</p>
-            </div>
-            <p class="slider-percent">95%</p>
-          </div>
-          <div class="slider">
-            <div class="slider-fill" id="js-slider">
-              <p class="slider-text">react/js</p>
-            </div>
-            <p class="slider-percent">80%</p>
-          </div>
-          <div class="slider">
-            <div class="slider-fill" id="lua-slider">
-              <p class="slider-text">lua/python</p>
-            </div>
-            <p class="slider-percent">70%</p>
-          </div>
-        </div>
+    </div>
+    <div class="panel">
+      <h3>Portfolio</h3>
+      <div class="project-goto">
+        <a href="" class="button">See more</a>
       </div>
-      <div id="tools-panel" class="panel">
-        <h2 id="tools-text">My Tools</h2>
-        <div id="tool-wrapper">
-          <div class="tool">
-            <div class="tool-text">Neovim</div>
-            <div class="tool-icon">
-            </div>
-          </div>
-          <div class="tool">
-            <div class="tool-text">Fish</div>
-            <div class="tool-icon">
-            </div>
-          </div>
-          <div class="tool">
-            <div class="tool-text">NextJS</div>
-            <div class="tool-icon">
-            </div>
-          </div> 
-          <div class="tool">
-            <div class="tool-text">Tailwind</div>
-            <div class="tool-icon">
-            </div>
-          </div> 
-          <div class="tool">
-            <div class="tool-text">Prisma</div>
-            <div class="tool-icon">
-            </div>
-          </div> 
-          <div class="tool">
-            <div class="tool-text">Figma</div>
-            <div class="tool-icon">
-            </div>
-          </div> 
-        </div>
+    </div>
+    <div class="panel">
+      <h3>MuddyTown</h3>
+      <div class="project-goto">
+        <a href="" class="button">See more</a>
       </div>
     </div>
   </div>
-  <div id="projects" class="page">
-    <p id="projects-text">Projects</p>
+  <div class="page" id="about">
+    <div class="panel">a little about me</div>
+    <div class="panel">
+      <h3>Experience</h3>
+    </div>
+    <div class="panel">
+      <h3>My Tools</h3>
+    </div>
   </div>
-  <div id="contact" class="page">
-    <p id="contact-text">Contact</p>
+  <div class="page" id="contact">
+    <h1>contact</h1>
   </div>
 </body>
 
