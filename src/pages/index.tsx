@@ -1,3 +1,4 @@
+import About from '@/components/About'
 import Contact from '@/components/Contact'
 import Landing from '@/components/Landing'
 import Navbar from '@/components/Navbar'
@@ -16,6 +17,7 @@ export default function Home() {
       <Landing />
       <Navbar  />
       <Work />
+      <About />
       <Contact />
     </>
   )
