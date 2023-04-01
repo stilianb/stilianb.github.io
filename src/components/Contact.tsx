@@ -18,7 +18,7 @@ function Contact() {
   };
 
   return (
-    <div id="contact" className="bg-crust p-6 mx-auto my-3 rounded-md flex justify-center min-h-fit w-fit" >
+    <div id="contact" className="bg-crust p-6 mx-auto my-3 rounded-md flex justify-center min-h-fit max-w-2xl" >
       <form id="contact-form" ref={form} className="inline-grid grid-cols-2 gap-3 h-fit my-auto" >
         <input type="text" placeholder="Name" name="from_name" className="bg-mantle rounded-md border-none" />
         <input type="text" placeholder="Email/Contact info" name="reply_to" className="bg-mantle rounded-md border-none" />
@@ -31,7 +31,7 @@ function Contact() {
         <input type="button"
           value="Send Email"
           onClick={sendEmail}
-          className="bg-surface0 rounded-md p-2 hover:bg-surface1 hover:cursor-pointer" />
+          className="bg-surface0 rounded-md p-2 hover:bg-surface1 hover:cursor-pointer " />
       </form>
     </div>
   )

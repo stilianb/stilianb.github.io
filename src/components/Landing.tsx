@@ -2,7 +2,7 @@ import React from 'react'
 
 function Landing() {
   return (
-    <div className="bg-mantle h-60 flex justify-evenly">
+    <div className="bg-mantle h-60 flex justify-center gap-10">
       <div id="landing-text" className=" pl-12 h-fit my-auto">
         <h1 className="text-4xl">Hi! I'm <span className="text-5xl text-lavender">Stilian</span></h1>
         <p className="">a webdev based out of colorado.</p>
