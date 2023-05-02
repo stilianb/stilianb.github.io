@@ -27,3 +27,22 @@ function openPage(event, pageName) {
     toggleNav();
   }
 }
+
+const sendEmailBtn = document.getElementById("submit-btn");
+
+document.getElementById("form").addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  sendEmailBtn.value = 'Sending...';
+
+  const serviceID = 'default_service';
+  const templateID = 'template_sjz51iv';
+
+  emailjs.sendForm(serviceID, templateID, this).then(() => {
+    sendEmailBtn.value = 'Send Email';
+    alert('Sent!');
+  }, (err) => {
+    sendEmailBtn.value = 'Send Email';
+    alert(JSON.strinify(err));
+  });
+});

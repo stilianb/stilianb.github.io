@@ -41,7 +41,7 @@ body {
 }
 
 nav {
-  background-color: var(--overlay0);
+  background-color: var(--mantle);
   position: fixed;
   z-index: 0;
   display: flex;
@@ -95,7 +95,8 @@ nav {
 .nav-item:hover {
   font-size: 5rem;
   cursor: pointer;
-  background-color: var(--overlay1);
+  border-top: 2px solid var(--overlay2);
+  border-bottom: 2px solid var(--overlay2);
 }
 
 .socials {
@@ -129,6 +130,7 @@ nav {
   display: none;
   color: var(--text);
   height: 100vh;
+  flex-direction: column;
 }
 
 #home {
@@ -144,6 +146,10 @@ nav {
 
 .landing-text {
   text-align: center;
+}
+
+.landing-subtext {
+  color: var(--subtext0);
 }
 
 .btn-wrapper {
@@ -172,20 +178,32 @@ nav {
 }
 
 .panel {
-  background-color: var(--surface0);
+  background-color: var(--mantle);
   margin: 1rem;
   padding: 1rem;
   border-radius: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .project-title {
   color: var(--sky);
+  font-size: 2rem;
+}
+
+.project-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 1rem;
 }
 
 .project-description {
   color: var(--subtext0);
   max-width: 75%;
   min-width: 50%;
+  padding-bottom: 1rem;
 }
 
 .project-link {
@@ -193,7 +211,96 @@ nav {
   text-decoration: none;
 }
 
-.section-header {
+.project-image {
+  background-color: var(--crust);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  width: 30%;
+  min-width: 300px;
+  min-height: 400px;
+}
+
+#about {
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+#about-image {
+  background-color: var(--crust);
+  padding: 1rem;
+  min-width: 400px;
+  min-height: 600px;
+  height: 600px;
+  border-radius: 0.5rem;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.about-header {
+  height: fit-content;
+  color: var(--sky);
+  font-size: 2rem;
+  border-bottom: 2px solid var(--surface2);
+}
+
+.about-content {
+  height: fit-content;
+  background-color: var(--mantle);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-top: auto;
+  margin-bottom: auto;
   margin-left: 1rem;
   margin-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
+#contact {
+}
+
+#form {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 75%;
+  gap: 1rem;
+}
+
+.field {
+  min-width: 300px;
+}
+
+#from_field {
+  flex-grow: 1;
+  width: 45%;
+}
+
+#reply-field {
+  flex-grow: 1;
+  width: 45%;
+}
+
+#message-field {
+  flex-grow: 2;
+  width: 100%;
+  min-height: fit-content;
+}
+
+#message {
+  min-height: 600px;
+}
+
+
+.field > input, #form > input, .field > textarea {
+  background-color: var(--mantle);
+  color: var(--text);
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 2rem;
+  padding: 0.5rem;
+  width: 100%;
+}
+
