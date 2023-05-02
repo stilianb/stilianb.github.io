@@ -42,7 +42,7 @@ body {
 
 nav {
   background-color: var(--overlay0);
-  position: absolute;
+  position: fixed;
   z-index: 0;
   display: flex;
   visibility: hidden;
@@ -67,23 +67,23 @@ nav {
 }
 
 #nav-toggle {
-  position: absolute;
+  position: fixed;
   right: 2rem;
-  top: 2rem;
+  bottom: 2rem;
   z-index: 1;
   color: var(--text);
   padding: 1rem;
-  background-color: var(--surface0);
+  background-color: var(--mantle);
   border-radius: 0.5rem;
 }
 
 #nav-toggle:hover {
-  background-color: var(--surface1);
+  background-color: var(--base);
   cursor: pointer;
 }
 
 #nav-toggle:active {
-  background-color: var(--surface2);
+  background-color: var(--crust);
 }
 
 .nav-item {
@@ -165,4 +165,35 @@ nav {
 .btn:hover {
   background-color: var(--surface1);
   cursor: pointer;
+}
+
+#projects {
+  flex-direction: column;
+}
+
+.panel {
+  background-color: var(--surface0);
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.project-title {
+  color: var(--sky);
+}
+
+.project-description {
+  color: var(--subtext0);
+  max-width: 75%;
+  min-width: 50%;
+}
+
+.project-link {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.section-header {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
