@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Stilian's Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/style.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/5dffb3fca8.js" crossorigin="anonymous"></script>
+  <script defer src="js/index.js"></script>
+</head>
+
+<body>
+  <div id="nav-toggle" class="" onclick="toggleNav()">
+    <i id="nav-icon" class="fa-solid fa-bars"></i>
+  </div>
+  <nav id="nav">
+    <div class="nav-item-container">
+      <div class="nav-item" onclick="openPage(event, 'home')">Home</div>
+      <div class="nav-item" onclick="openPage(event, 'projects')">Projects</div>
+      <div class="nav-item" onclick="openPage(event, 'about')">About</div>
+      <div class="nav-item" onclick="openPage(event, 'contact')">Contact</div>
+      <div class="socials">
+        <a href="#" class="social">
+          <i class="fa-brands fa-github"></i>
+          <p class="social-text">GitHub</p>
+        </a>
+        <a href="#" class="social">
+          <i class="fa-brands fa-linkedin"></i>
+          <p class="social-text">LinkedIn</p>
+        </a>
+        <a href="#" class="social">
+          <i class="fa-brands fa-codepen"></i>
+          <p class="social-text">CodePen</p>
+        </a>
+      </div>
+    </div>
+  </nav>
+  <div id="home" class="page">
+    <div class="landing-text">
+      <h1 class="landing-header">Hi, I'm <span id="name">Stilian</span></h1>
+      <p class="landing-subtext">A webdev based in Colorado.</p>
+    </div>
+    <div class="btn-wrapper">
+      <div class="btn" onclick="openPage(event, 'projects')">Check out my work</div>
+      <div class="btn" onclick="openPage(event, 'contact')">Get in touch</div>
+    </div>
+  </div>
+  <div id="projects" class="page">
+    Projects
+  </div>
+  <div id="about" class="page">
+    About
+  </div>
+  <div id="contact" class="page">
+    Contact
+  </div>
+</body>
+
+</html>
