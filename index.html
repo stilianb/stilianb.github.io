@@ -11,15 +11,10 @@
 </head>
 
 <body>
-  <div id="nav-toggle" class="" onclick="toggleNav()">
-    <i id="nav-icon" class="fa-solid fa-bars"></i>
-  </div>
-  <nav id="nav">
-    <div class="nav-item-container">
-      <div class="nav-item" onclick="openPage(event, 'home')">Home</div>
-      <div class="nav-item" onclick="openPage(event, 'projects')">Projects</div>
-      <div class="nav-item" onclick="openPage(event, 'about')">About</div>
-      <div class="nav-item" onclick="openPage(event, 'contact')">Contact</div>
+  <div class="hero" id="landing">
+    <div class="hero-text">
+      <h1>Hi, I'm <span id="name">Stilian</span></h1>
+      <p>A webdev based in Colorado.</p>
       <div class="socials">
         <a href="#" class="social">
           <i class="fa-brands fa-github"></i>
@@ -35,107 +30,33 @@
         </a>
       </div>
     </div>
-  </nav>
-  <div id="home" class="page">
-    <div class="landing-text">
-      <h1 class="landing-header">Hi, I'm <span id="name">Stilian</span></h1>
-      <p class="landing-subtext">A webdev based in Colorado.</p>
-    </div>
-    <div class="btn-wrapper">
-      <div class="btn" onclick="openPage(event, 'projects')">Check out my work</div>
-      <div class="btn" onclick="openPage(event, 'contact')">Get in touch</div>
+    <div class="hero-image-container">
+      <img src="images/testimage.jpg" alt="" class="hero-image">
     </div>
   </div>
+
+  <nav>
+    <a href="#landing" class="nav-name">
+      <img src="favicon_io/favicon.ico" alt="">
+    </a>
+    <div class="nav-links">
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#about" class="nav-link">About</a>
+    </div>
+  </nav>
+
   <div id="projects" class="page">
-    <div class="panel" id="cliquebait-project">
-      <div class="project-text">
-        <div class="project-title-desc">
-          <div class="project-title">CliqueBait</div>
-          <div class="project-description">A full stack social media management tool on the android platform.</div>
-        </div>
-        <div class="project-link-container">
-          <a href="#" class="project-link">Check out the project</a>
-        </div>
-      </div>
-      <div class="project-image"> </div>
-    </div>
-    <div class="panel" id="va-portfolio">
-      <div class="project-text">
-        <div class="project-title-desc">
-          <div class="project-title">Voice Acting Portfolio</div>
-          <div class="project-description">A portfolio page for Conner Breece.</div>
-        </div>
-        <div class="project-link-container">
-          <a href="#" class="project-link">Check out his page</a>
-        </div>
-      </div>
-      <div class="project-image"> </div>
-    </div>
-    <div class="panel" id="personal-portfolio">
-      <div class="project-text">
-        <div class="project-title-desc">
-          <div class="project-title">Personal Portfolio</div>
-          <div class="project-description">The repo for this page, in vanilla JS and NextJS.</div>
-        </div>
-        <div class="project-link-container">
-          <a href="#" class="project-link">Check out the project</a>
-        </div>
-      </div>
-      <div class="project-image"> </div>
-    </div>
-    <div class="panel" id="muddytown">
-      <div class="project-text">
-        <div class="project-title-desc">
-          <div class="project-title">MuddyTown</div>
-          <div class="project-description">desc wip</div>
-        </div>
-        <div class="project-link-container">
-          <a href="#" class="project-link">Check out the project</a>
-        </div>
-      </div>
-      <div class="project-image"> </div>
-    </div>
-    <div class="panel" id="neovim-rc">
-      <div class="project-text">
-        <div class="project-title-desc">
-          <div class="project-title">Neovim Config</div>
-          <div class="project-description">My personal lua config for Neovim.</div>
-        </div>
-        <div class="project-link-container">
-          <a href="#" class="project-link">Check out the project</a>
-        </div>
-      </div>
-      <div class="project-image"> </div>
+    <div class="page-content">
     </div>
   </div>
   <div id="about" class="page">
-    <div id="about-image"></div>
-    <div class="about-content">
-      <div class="about-content-text">
-        <div class="about-header">About</div>
-        <div class="about-text">Lorem Ipsum is hard to google</div>
-      </div>
-      <div class="about-content-resume btn">Resume</div>
+    <div class="page-content">
     </div>
   </div>
-  <div id="contact" class="page">
-    <form id="form">
-      <div class="field" id="from_field">
-        <input type="text" name="from_name" id="from_name" placeholder="Name">
-      </div>
-      <div class="field" id="reply-field">
-        <input type="text" name="reply_to" id="reply_to" placeholder="Email/Contact Info">
-      </div>
-      <div class="field" id="message-field">
-        <textarea name="message" id="message" placeholder="Message"></textarea>
-      </div>
-      <input type="submit" id="submit-btn" value="Send Email">
-    </form>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-      emailjs.init('3tXRjwYcRXx0sqrSo')
-    </script>
-  </div>
+  <footer>
+    <p class="footer-text">Thanks to: </p>
+    <a href="https://fontawesome.com/">FontAwesome</a>
+    <a href="https://github.com/catppuccin/catppuccin">Catppuccin</a>
+  </footer>
 </body>
-
 </html>
