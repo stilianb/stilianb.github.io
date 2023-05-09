@@ -37,7 +37,7 @@
 
   <nav>
     <a href="#landing" class="nav-name">
-      <img src="favicon_io/favicon.ico" alt="">
+      <img src="./favicon.ico" alt="">
     </a>
     <div class="nav-links">
       <a href="#projects" class="nav-link">Projects</a>
@@ -47,6 +47,25 @@
 
   <div id="projects" class="page">
     <div class="page-content">
+      <div class="search">search</div>
+      <ul class="project-list">
+        <li class="project" id="cliquebait" onclick="toggleProject(event, 'cliquebait')">
+          <div class="project-container">
+            <div class="project-text">
+              <h3 class="project-name">Project Name</h3>
+              <p class="short-desc">project short desc</p>
+            </div>
+            <ul class="languages">
+              <li class="language">Language 1</li>
+              <li class="language">Language 2</li>
+            </ul>
+          </div>
+          <div class="project-extended">
+            <p>extended desc</p>
+            <a href="#">Check out the project</a>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
   <div id="about" class="page">
@@ -59,4 +78,5 @@
     <a href="https://github.com/catppuccin/catppuccin">Catppuccin</a>
   </footer>
 </body>
+
 </html>

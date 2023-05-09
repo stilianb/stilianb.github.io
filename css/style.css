@@ -45,16 +45,22 @@ a:hover {
   color: var(--blue);
 }
 
+body {
+  background-color: var(--base);
+  color: var(--text);
+}
+
 nav {
   position: sticky;
   top: 0;
-  background-color: white;
+  background-color: var(--mantle);
   display: flex;
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   padding: 0.75rem;
   gap: 1rem;
+  margin-top: 1rem;
 }
 
 .nav-name {
@@ -68,12 +74,20 @@ nav {
 
 .nav-link {
   border-radius: 0.5rem;
-  background-color: darkgray;
+  background-color: var(--surface0);
   padding: 0.5rem;
 }
 
+.nav-link:hover {
+  background-color: var(--surface1);
+}
+
+.nav-link:active {
+  background-color: var(--surface2);
+}
+
 .hero {
-  height: 35rem;
+  height: fit-content;
   display: flex;
   flex-wrap: wrap;
 }
@@ -85,6 +99,7 @@ nav {
 
 #name {
   font-size: 3.5rem;
+  color: var(--lavendar);
 }
 
 .hero-text > p {
@@ -92,7 +107,7 @@ nav {
 }
 
 .hero-image-container {
-  background-color: darkgray;
+  background-color: var(--mantle);
   height: fit-content;
   margin: auto;
   border-radius: 0.5rem;
@@ -107,6 +122,7 @@ nav {
 
 .socials {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   margin-top: 2rem;
   margin-left: 1rem;
@@ -119,18 +135,67 @@ nav {
 }
 
 .page {
-  background-color: gray;
+  background-color: var(--base);
   height: 100vh;
-  padding-top: 4.5rem;
+  padding-top: 5rem;
   padding-bottom: 1rem;
 }
 
 .page-content {
-  background-color: darkgray;
+  background-color: var(--crust);
   height: 100%;
   border-radius: 0.5rem;
   margin-left: 1rem;
   margin-right: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  list-style: none;
+  padding-left: 0;
+}
+
+.project {
+  background-color: var(--base);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.project:hover {
+  background-color: var(--surface0);
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.project:active {
+  background-color: var(--surface0);
+  border-radius: 0.5rem;
+}
+
+.project-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project-extended {
+  max-height: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.project.is-active > .project-extended {
+  display: flex;
+  flex-direction: column;
+  max-height: 1000px;
+  visibility: visible;
 }
 
 footer {
