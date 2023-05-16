@@ -1,0 +1,19 @@
+#hero-text-container, #image-container {
+  min-height: 300px;
+}
+
+.project {
+  transition: all 0.5s ease;
+}
+
+.open-project {
+  background-color: green;
+  max-height: 800px;
+  height: 800px;
+}
+
+.close-project {
+  background-color: red;
+  max-height: 2rem;
+  height: 2rem;
+}
