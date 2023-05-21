@@ -9,7 +9,19 @@ function Projects() {
         <ProjectItem
           name="project1"
           shortdesc="short description"
-          extendeddesc="extended description :) lorem ipsum is hard to google"
+          extendeddesc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          url=""
+        />
+        <ProjectItem
+          name="project2"
+          shortdesc="short description"
+          extendeddesc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          url=""
+        />
+        <ProjectItem
+          name="project3"
+          shortdesc="short description"
+          extendeddesc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
           url=""
         />
       </div>
