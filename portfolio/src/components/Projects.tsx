@@ -1,28 +1,35 @@
 import React from 'react'
 import ProjectItem from './ProjectItem'
+import photo1 from '../assets/img1.jpg'
 
 function Projects() {
   return (
-    <div id="projects" className="pt-14">
-      <div className="bg-gray-400 m-2 p-2 rounded-md h-full">
-        <div className="text-3xl">My Work...</div>
+    <div id="projects" className="m-2 pt-16 ">
+      <div className="bg-neutral-500 w-full rounded-md flex flex-wrap gap-2 p-2 justify-evenly">
         <ProjectItem
-          name="project1"
-          shortdesc="short description"
-          extendeddesc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-          url=""
+          name="CliqueBait"
+          img_url={photo1}
+          desc=
+          "A full stack social media management app for Android. Created for my capstone at MSU Denver."
+          contribution="Front-end design and implementation"
         />
         <ProjectItem
-          name="project2"
-          shortdesc="short description"
-          extendeddesc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-          url=""
+          name="Project 2"
+          img_url={photo1}
+          desc="project description"
+          contribution="project contribution"
         />
         <ProjectItem
-          name="project3"
-          shortdesc="short description"
-          extendeddesc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-          url=""
+          name="Project 3"
+          img_url={photo1}
+          desc="project description"
+          contribution="project contribution"
+        />
+        <ProjectItem
+          name="Project 4"
+          img_url={photo1}
+          desc="project description"
+          contribution="project contribution"
         />
       </div>
     </div>

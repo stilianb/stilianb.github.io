@@ -13,7 +13,6 @@ function App() {
       <Navbar />
       <Projects />
       <About />
-      <Footer />
     </>
   )
 }
