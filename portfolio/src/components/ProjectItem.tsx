@@ -12,17 +12,21 @@ function ProjectItem(props) {
 
 
   return (
-    <div id={props.name} className={`rounded-md transition-all w-fit`} onClick={ToggleClass}>
-      <div className="bg-neutral-600 w-[400px] h-[500px] rounded-md flex flex-col justify-between">
-        <div className="h-full p-2 flex flex-col">
+    <div id={props.name} className={`bg-surface0 rounded-md transition-all`} onClick={ToggleClass}>
+      <div className="w-[400px] h-[500px] relative z-0 group">
+        <img src={props.img_url} alt="" className="rounded-md absolute" />
+        <div className="bg-mantle text-text flex flex-col justify-between p-2 rounded-md absolute transition-all h-1/3 group-hover:h-72 overflow-hidden w-full bottom-0">
           <div className="">
-            <div className="text-xl">{props.name}</div>
-            <div className="">tags</div>
+            <div className="text-2xl">{props.name}</div>
+            <div className="text-xs">tags</div>
+            <div className="text-sm">{props.desc}</div>
           </div>
-          <div className="flex-grow">{props.desc}</div>
-          <div className="">My Role: {props.contribution}</div>
+          <div className="w-fit mx-auto m-2">
+            <a href="#" className="bg-surface0 transition-all opacity-0 group-hover:opacity-100 hover:bg-surface1 rounded-md p-2">
+              Check out the Project
+            </a>
+          </div>
         </div>
-        <a href="#" className="bg-neutral-700 hover:bg-neutral-800 rounded-md text-center p-2 m-2">Check out the Project</a>
       </div>
     </div>
   )

@@ -3,7 +3,7 @@ import React from 'react'
 function Hero() {
   return (
     <div id="hero" className="page flex flex-wrap gap-2 p-2">
-      <div id="hero-text-container" className="bg-gray-400 rounded-md flex-grow flex flex-col justify-evenly">
+      <div id="hero-text-container" className="bg-crust text-text rounded-md flex-grow flex flex-col justify-evenly">
         <div className="mx-auto ">
           <div className="flex flex-wrap gap-2 items-center w-fit">
             <div className="text-3xl">Hi, I'm</div>
@@ -19,7 +19,7 @@ function Hero() {
           </ul>
         </div>
       </div>
-      <div id="image-container" className="bg-gray-400 rounded-md flex-grow flex justify-center">
+      <div id="image-container" className="bg-crust text-text rounded-md flex-grow flex justify-center">
         <div className="h-fit m-auto">image-placeholder-text</div>
       </div>
     </div>

@@ -5,28 +5,16 @@ import photo1 from '../assets/img1.jpg'
 function Projects() {
   return (
     <div id="projects" className="m-2 pt-16 ">
-      <div className="bg-neutral-500 w-full rounded-md flex flex-wrap gap-2 p-2 justify-evenly">
+      <div className="bg-crust w-full rounded-md flex flex-wrap gap-2 p-2 justify-evenly">
+        <div className="text-3xl text-text w-full">My Work...</div>
         <ProjectItem
-          name="CliqueBait"
-          img_url={photo1}
-          desc=
-          "A full stack social media management app for Android. Created for my capstone at MSU Denver."
-          contribution="Front-end design and implementation"
-        />
-        <ProjectItem
-          name="Project 2"
+          name="Project Name"
           img_url={photo1}
           desc="project description"
           contribution="project contribution"
         />
         <ProjectItem
-          name="Project 3"
-          img_url={photo1}
-          desc="project description"
-          contribution="project contribution"
-        />
-        <ProjectItem
-          name="Project 4"
+          name="Project Name 2"
           img_url={photo1}
           desc="project description"
           contribution="project contribution"
