@@ -10,13 +10,25 @@ function Projects() {
         <ProjectItem
           name="Project Name"
           img_url={photo1}
-          desc="project description"
+          desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
           contribution="project contribution"
         />
         <ProjectItem
-          name="Project Name 2"
+          name="Project Name"
           img_url={photo1}
-          desc="project description"
+          desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          contribution="project contribution"
+        />
+        <ProjectItem
+          name="Project Name"
+          img_url={photo1}
+          desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          contribution="project contribution"
+        />
+        <ProjectItem
+          name="Project Name"
+          img_url={photo1}
+          desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
           contribution="project contribution"
         />
       </div>
