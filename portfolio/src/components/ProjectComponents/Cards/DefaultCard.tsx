@@ -1,14 +1,17 @@
 import React from "react";
 
-function ProjectCard(props) {
+function DefaultCard(props) {
   return (
-    <div
-      className={`${props.card === props.name ? "max-w-full z-10 " : "max-w-0 z-5 "} ${props.color
-        } rounded-md min-h-full w-full absolute right-0 truncate z-10 translate-all duration-[400ms]`}
-    >
-      <div className={`text-black`}>{props.name}</div>
+    <div className="absolute w-full h-full">
+      <h2
+        className={`translate-all duration-[300ms] bg-base rounded-t-md w-fit px-2 py-1 text-3xl ${
+          props.card === "default" ? "" : "-translate-y-10 delay-[500ms]"
+        }`}
+      >
+        Stilian Balasopoulov
+      </h2>
     </div>
   );
 }
 
-export default ProjectCard;
+export default DefaultCard;
