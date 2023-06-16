@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <div className="p-2 h-screen flex">
-        <div className="bg-base text-text rounded-md max-h-full w-full mx-auto max-w-5xl p-2 ">
+        <div className="text-text rounded-md max-h-full w-full mx-auto max-w-5xl p-2 ">
           <Projects />
         </div>
       </div>
