@@ -2,23 +2,16 @@ import React from "react";
 
 function DefaultCard(props) {
   return (
-    <div className="absolute flex flex-col w-full h-full bg-base rounded-md p-2">
-      <div className="flex-grow">
-        <h1 className="">Stilian Balasopoulov</h1>
-      </div>
-      <div className="flex gap-4">
-          <a href="" className="flex group gap-1 text-3xl">
-            <i className="fa-brands fa-github h-fit my-auto "></i>
-            <div className="max-w-0 truncate translate-all duration-[300ms] group-hover:max-w-[200px]">Github</div>
-          </a>
-          <a href="" className="flex group gap-1 text-3xl">
-            <i className="fa-brands fa-linkedin h-fit my-auto "></i>
-            <div className="max-w-0 truncate translate-all duration-[300ms] group-hover:max-w-[200px]">Linkedin</div>
-          </a>
-          <a href="" className="flex group gap-1 text-3xl">
-            <i className="fa-brands fa-codepen h-fit my-auto "></i>
-            <div className="max-w-0 truncate translate-all duration-[300ms] group-hover:max-w-[200px]">Codepen</div>
-          </a>
+    <div className="absolute flex flex-col w-full h-full justify-center bg-mantle rounded-md p-2 ">
+      <div className="w-fit mx-auto p-2 flex flex-col gap-3 ">
+        <div className="">
+          <h2 className="ml-1 text-subtext0 text-2xl">Hi, I'm</h2>
+          <h1 className="text-5xl">Stilian Balasopoulov</h1>
+          <p className="ml-1 text-subtext0">a webdev based in Colorado.</p>
+        </div>
+        <div className="ml-1 max-w-[75%] ">
+          <p className="text-subtext1">Feel free to check out my work or get in touch</p>
+        </div>
       </div>
     </div>
   );

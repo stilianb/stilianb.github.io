@@ -1,15 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 
 function ProjectCard(props) {
+
   return (
     <div
       className={`${
-        props.card === props.name ? "max-h-full md:max-w-full z-10 " : "max-h-0 md:max-h-full md:max-w-0 z-5 "
-      } ${
-        props.color
-      } rounded-md h-full w-full absolute bottom-0 md:right-0 truncate z-10 translate-all duration-[400ms]`}
+        props.card === props.name ? "max-w-full" : "max-w-0 "
+      } bg-crust rounded-md absolute right-0 overflow-auto h-full w-full translate-all duration-200 `}
     >
-      <div className={``}>{props.name}</div>
+      {props.name}
     </div>
   );
 }

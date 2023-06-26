@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useState } from "react";
 
-function ProjectButton(props, { mode }) {
+function ProjectButton(props) {
   return (
-    <div>
-      <button className="" onClick={() => mode("Project 1")}>project 1</button> 
+    <div className="">
+      <button
+        className={`bg-surface0 hover:bg-surface1`}
+      >
+        {props.name}
+      </button>
     </div>
-  )
+  );
 }
 
-export default ProjectButton
+export default ProjectButton;

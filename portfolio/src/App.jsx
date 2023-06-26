@@ -1,13 +1,134 @@
 import "./App.css";
 import React, { useState } from "react";
 import Projects from "./components/ProjectComponents/Projects";
+import DefaultCard from "./components/ProjectComponents/Cards/DefaultCard";
+import ProjectCard from "./components/ProjectComponents/Cards/ProjectCard";
+import AltCard from "./components/ProjectComponents/Cards/AltCard";
+import MiscCard from "./components/ProjectComponents/Cards/MiscCard";
+import ProjectButton from "./components/ProjectComponents/Cards/ProjectButton";
 
 function App() {
+  let projectA = "CliqueBait";
+  let projectB = "BCI Edge";
+  let projectC = "Portfolio's";
+  let projectD = "Side Projects";
+  let [activeCard, setActiveCard] = useState("default");
+  let [isActive, setActive] = useState("false");
+  let [lightMode, setLightMode] = useState("false");
+
+  const ToggleMode = () => {
+    setLightMode(!lightMode);
+  };
+
+  const ToggleProjects = () => {
+    setActive(!isActive);
+  };
+
+  function ToggleCard(card) {
+    activeCard === card ? setActiveCard("default") : setActiveCard(`${card}`);
+    if (card !== "default") {setActive(!isActive)}
+  }
+
   return (
     <>
-      <div className="p-2 h-screen flex">
-        <div className="text-text rounded-md max-h-full w-full mx-auto max-w-5xl p-2 ">
-          <Projects />
+      <div
+        className={`${lightMode ? "mocha" : "latte"
+          } bg-base h-screen text-text flex flex-col md:justify-center `}
+      >
+        <div className="h-full flex flex-col md:flex-row p-4 gap-4 md:justify-center ">
+          <div className="flex-grow relative max-w-3xl max-h-[700px] md:max-h-[800px] h-full md:my-auto ">
+            <div
+              className={`${activeCard !== "default" ? "max-w-[500px] delay-[300ms]" : "max-w-0 px-0"
+                } absolute z-50 right-0 top-20 translate-all duration-200 p-4 
+                bg-green text-base rounded-l-md hover:cursor-pointer`}
+              onClick={() => ToggleCard("default")}
+            >
+              <i className="fa-solid fa-house"></i>
+            </div>
+            <DefaultCard name={activeCard} />
+            <ProjectCard card={activeCard} name={projectA} />
+            <ProjectCard card={activeCard} name={projectB} />
+            <AltCard card={activeCard} name={projectC} />
+            <MiscCard card={activeCard} name={projectD} />
+          </div>
+          <div className="fixed bottom-4 right-4 md:relative h-fit my-auto flex flex-col">
+            <div className="hidden md:flex ml-6 px-2 bg-mantle w-fit rounded-t-md">
+              Projects
+            </div>
+            <div className="md:bg-mantle md:ml-4 md:p-2 md:rounded-md relative">
+              <div
+                className={`${isActive
+                    ? "opacity-100"
+                    : "hidden md:block opacity-0 md:opacity-100"
+                  } translate-all duration-100 hover:cursor-pointer hover:text-blue overflow-hidden absolute text-3xl md:text-lg right-4 -top-8 md:-top-4 bg-crust rounded-t-md px-3`}
+                onClick={ToggleMode}
+              >
+                <i className="fa-solid fa-moon"></i>
+              </div>
+              <div className="flex">
+                <div className=" my-auto md:hidden">
+                  <div
+                    className="bg-pink text-base p-4 rounded-l-md flex gap-2"
+                    onClick={ToggleProjects}
+                  >
+                    <div className={`${isActive ? "hidden" : ""}`}>
+                      Projects
+                    </div>
+                    <i
+                      className={`${isActive ? "fa-solid fa-x" : "fa-solid fa-arrow-left"
+                        } my-auto `}
+                    ></i>
+                  </div>
+                </div>
+                <div
+                  className={`${isActive
+                      ? "max-w-[500px] p-2"
+                      : "max-w-0 md:max-w-[500px] w-full px-0"
+                    } bg-crust py-2 md:p-2 max-h-[240px] lg:max-h-fit whitespace-nowrap rounded-l-md overflow-auto flex gap-2 flex-col translate-all duration-200`}
+                >
+                  <button
+                    className={`${activeCard === projectA ? "bg-surface2" : "bg-surface0"
+                      } hover:bg-surface1`}
+                    onClick={() => ToggleCard(`${projectA}`)}
+                  >
+                    {projectA}
+                  </button>
+                  <button
+                    className={`${activeCard === projectB ? "bg-surface2" : "bg-surface0"
+                      } hover:bg-surface1`}
+                    onClick={() => ToggleCard(`${projectB}`)}
+                  >
+                    {projectB}
+                  </button>
+                  <button
+                    className={`${activeCard === projectC ? "bg-surface2" : "bg-surface0"
+                      } hover:bg-surface1`}
+                    onClick={() => ToggleCard(`${projectC}`)}
+                  >
+                    {projectC}
+                  </button>
+                  <button
+                    className={`${activeCard === projectD ? "bg-surface2" : "bg-surface0"
+                      } hover:bg-surface1`}
+                    onClick={() => ToggleCard(`${projectD}`)}
+                  >
+                    {projectD}
+                  </button>
+                </div>
+              </div>
+              <div className="hidden md:flex gap-1 justify-evenly text-2xl mt-2 bg-crust rounded-md p-2">
+                <a href="#" className="">
+                  <i className="fa-brands fa-github my-auto"></i>
+                </a>
+                <a href="#" className="">
+                  <i className="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="#" className="">
+                  <i className="fa-solid fa-envelope"></i>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>
