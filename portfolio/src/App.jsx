@@ -1,17 +1,21 @@
 import "./App.css";
 import React, { useState } from "react";
-import Projects from "./components/ProjectComponents/Projects";
 import DefaultCard from "./components/ProjectComponents/Cards/DefaultCard";
 import ProjectCard from "./components/ProjectComponents/Cards/ProjectCard";
 import AltCard from "./components/ProjectComponents/Cards/AltCard";
 import MiscCard from "./components/ProjectComponents/Cards/MiscCard";
-import ProjectButton from "./components/ProjectComponents/Cards/ProjectButton";
+import {
+  DESCRIPTION_A,
+  DESCRIPTION_B,
+  PROJECTA_NAME,
+  PROJECTB_NAME,
+  PROJECTC_NAME,
+  PROJECTD_NAME,
+  TEASER_A,
+  TEASER_B,
+} from "./constants/ProjectInfo";
 
 function App() {
-  let projectA = "CliqueBait";
-  let projectB = "BCI Edge";
-  let projectC = "Portfolio's";
-  let projectD = "Side Projects";
   let [activeCard, setActiveCard] = useState("default");
   let [isActive, setActive] = useState("false");
   let [lightMode, setLightMode] = useState("false");
@@ -26,33 +30,37 @@ function App() {
 
   function ToggleCard(card) {
     activeCard === card ? setActiveCard("default") : setActiveCard(`${card}`);
-    if (card !== "default") {setActive(!isActive)}
+    if (card !== "default") {
+      setActive(!isActive);
+    }
   }
 
   return (
     <>
       <div
         className={`${lightMode ? "mocha" : "latte"
-          } bg-base h-screen text-text flex flex-col md:justify-center `}
+          } bg-black h-screen w-full text-text overflow-auto`}
       >
-        <div className="h-full flex flex-col md:flex-row p-4 gap-4 md:justify-center ">
-          <div className="flex-grow relative max-w-3xl max-h-[700px] md:max-h-[800px] h-full md:my-auto ">
-            <div
-              className={`${activeCard !== "default" ? "max-w-[500px] delay-[300ms]" : "max-w-0 px-0"
-                } absolute z-50 right-0 top-20 translate-all duration-200 p-4 
-                bg-green text-base rounded-l-md hover:cursor-pointer`}
-              onClick={() => ToggleCard("default")}
-            >
-              <i className="fa-solid fa-house"></i>
-            </div>
+        <div className="h-full w-full flex flex-col md:flex-row p-4 gap-4 md:justify-center ">
+          <div className="flex-grow relative max-w-3xl h-full md:my-auto ">
             <DefaultCard name={activeCard} />
-            <ProjectCard card={activeCard} name={projectA} />
-            <ProjectCard card={activeCard} name={projectB} />
-            <AltCard card={activeCard} name={projectC} />
-            <MiscCard card={activeCard} name={projectD} />
+            <ProjectCard
+              card={activeCard}
+              name={PROJECTA_NAME}
+              teas={TEASER_A}
+              desc={DESCRIPTION_A}
+            />
+            <ProjectCard
+              card={activeCard}
+              name={PROJECTB_NAME}
+              teas={TEASER_B}
+              desc={DESCRIPTION_B}
+            />
+            <AltCard card={activeCard} name={PROJECTC_NAME} />
+            <AltCard card={activeCard} name={PROJECTD_NAME} />
           </div>
           <div className="fixed bottom-4 right-4 md:relative h-fit my-auto flex flex-col">
-            <div className="hidden md:flex ml-6 px-2 bg-mantle w-fit rounded-t-md">
+            <div className={`${isActive ? "opacity-100" : "opacity-0 md:opacity-100"} ml-11 md:ml-6 px-2 bg-mantle w-fit rounded-t-md`}>
               Projects
             </div>
             <div className="md:bg-mantle md:ml-4 md:p-2 md:rounded-md relative">
@@ -65,17 +73,14 @@ function App() {
               >
                 <i className="fa-solid fa-moon"></i>
               </div>
-              <div className="flex">
-                <div className=" my-auto md:hidden">
+              <div className="flex ">
+                <div className=" my-auto md:hidden ml-auto">
                   <div
                     className="bg-pink text-base p-4 rounded-l-md flex gap-2"
                     onClick={ToggleProjects}
                   >
-                    <div className={`${isActive ? "hidden" : ""}`}>
-                      Projects
-                    </div>
                     <i
-                      className={`${isActive ? "fa-solid fa-x" : "fa-solid fa-arrow-left"
+                      className={`${isActive ? "fa-solid fa-x" : "fa-solid fa-bars"
                         } my-auto `}
                     ></i>
                   </div>
@@ -84,35 +89,43 @@ function App() {
                   className={`${isActive
                       ? "max-w-[500px] p-2"
                       : "max-w-0 md:max-w-[500px] w-full px-0"
-                    } bg-crust py-2 md:p-2 max-h-[240px] lg:max-h-fit whitespace-nowrap rounded-l-md overflow-auto flex gap-2 flex-col translate-all duration-200`}
+                    } bg-crust py-2 md:p-2  lg:max-h-fit whitespace-nowrap rounded-l-md overflow-auto flex gap-2 flex-col translate-all duration-200`}
                 >
                   <button
-                    className={`${activeCard === projectA ? "bg-surface2" : "bg-surface0"
-                      } hover:bg-surface1`}
-                    onClick={() => ToggleCard(`${projectA}`)}
+                    className={`${activeCard === PROJECTA_NAME
+                        ? "bg-surface2"
+                        : "bg-surface0"
+                      } hover:bg-surface1 border-surface1`}
+                    onClick={() => ToggleCard(`${PROJECTA_NAME}`)}
                   >
-                    {projectA}
+                    {PROJECTA_NAME}
                   </button>
                   <button
-                    className={`${activeCard === projectB ? "bg-surface2" : "bg-surface0"
-                      } hover:bg-surface1`}
-                    onClick={() => ToggleCard(`${projectB}`)}
+                    className={`${activeCard === PROJECTB_NAME
+                        ? "bg-surface2"
+                        : "bg-surface0"
+                      } hover:bg-surface1 border-surface1`}
+                    onClick={() => ToggleCard(`${PROJECTB_NAME}`)}
                   >
-                    {projectB}
+                    {PROJECTB_NAME}
                   </button>
                   <button
-                    className={`${activeCard === projectC ? "bg-surface2" : "bg-surface0"
-                      } hover:bg-surface1`}
-                    onClick={() => ToggleCard(`${projectC}`)}
+                    className={`${activeCard === PROJECTC_NAME
+                        ? "bg-surface2"
+                        : "bg-surface0"
+                      } hover:bg-surface1 border-surface1`}
+                    onClick={() => ToggleCard(`${PROJECTC_NAME}`)}
                   >
-                    {projectC}
+                    {PROJECTC_NAME}
                   </button>
                   <button
-                    className={`${activeCard === projectD ? "bg-surface2" : "bg-surface0"
-                      } hover:bg-surface1`}
-                    onClick={() => ToggleCard(`${projectD}`)}
+                    className={`${activeCard === PROJECTD_NAME
+                        ? "bg-surface2"
+                        : "bg-surface0"
+                      } hover:bg-surface1 border-surface1`}
+                    onClick={() => ToggleCard(`${PROJECTD_NAME}`)}
                   >
-                    {projectD}
+                    {PROJECTD_NAME}
                   </button>
                 </div>
               </div>
