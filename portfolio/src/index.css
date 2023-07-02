@@ -7,10 +7,10 @@
 
 :root {
   font-family: "JetBrains Mono", monospace;
-  /* background-color: #1e1e2e; */
   /* color: #cdd6f4; */
   scroll-behavior: smooth;
 }
+
 
 .subtext {
   font-size: 1.5rem;

@@ -1,63 +1,45 @@
 import React, { useState } from "react";
+import Contributors from "../Contributors";
+import Tools from "../Tools";
 
 function ProjectCard(props) {
   let isActive = props.card === props.name;
   return (
     <div
-      className={`${
-        isActive ? "max-w-full" : "max-w-0 "
-      } bg-mantle flex rounded-md absolute right-0 w-full h-full translate-all duration-200 `}
+      className={`${isActive ? "max-w-full" : "max-w-0 delay-200"
+        } bg-mantle flex rounded-md absolute right-0 w-full h-full translate-all duration-200 `}
     >
-      <div className="w-[85%] flex flex-col gap-2 h-full m-auto overflow-auto ">
+      <div className="h-full w-full m-auto overflow-auto ">
         <div
-          className={`${
-            isActive ? "opacity-100" : "opacity-0"
-          } translate-all duration-100`}
+          className={`${isActive ? "opacity-100 delay-200 duration-200 " : "opacity-0 delay-0 duration-200"
+            } translate-all flex flex-col gap-4 h-full `}
         >
-          <h1 className="text-4xl md:text-5xl">{props.name}</h1>
-          <p className="text-subtext0 ml-4">{props.teas}</p>
-        </div>
-        <div
-          className={`${
-            isActive ? "opacity-100 delay-300" : "opacity-0"
-          } flex flex-col md:flex-row gap-2 translate-all duration-100 min-h-fit `}
-        >
-          <div className="flex-grow flex flex-col justify-evenly bg-crust rounded-md p-4 gap-2">
-            <div className="">{props.desc}</div>
-            <div className="flex w-fit mx-auto gap-2 justify-center">
-              <a
-                href="#"
-                className="bg-surface0 hover:bg-surface1 translate-all duration-100 p-2 rounded-md"
-              >
-                Learn More
-              </a>
-              <a
-                href="#"
-                className="bg-surface0 hover:bg-surface1 translate-all duration-100 p-2 rounded-md"
-              >
-                Project GitHub
-              </a>
-            </div>
+          <div className="rounded-t-md bg-crust p-3 ">
+            <div className="text-5xl">{props.name}</div>
+            <div className="text-subtext0 ml-1">{props.teas}</div>
           </div>
-          <div className="flex flex-col gap-2">
-            <div className="flex-grow bg-crust rounded-md p-2 min-w-[200px]">
-              <div className="">Tools</div>
-              <ul className="">
-                <li className="">Kotlin</li>
-                <li className="">Auth0</li>
-                <li className="">Multiple API's</li>
-              </ul>
+          <div className="flex flex-col gap-2 w-[85%] h-[80%] my-auto mx-auto ">
+            <div className="bg-crust rounded-md hidden lg:flex flex-grow max-h-[300px] overflow-auto relative">
+              <img src={props.image} alt="" className="absolute" />
             </div>
-            <div className="flex-grow bg-crust rounded-md p-2">
-              <div className="">Team</div>
-              <div className="">Lorem Ipsum</div>
-              <div className="">Lorem Ipsum</div>
-              <div className="">Lorem Ipsum</div>
-              <div className="">Lorem Ipsum</div>
-              <div className="">Lorem Ipsum</div>
-              <div className="">Lorem Ipsum</div>
-              <div className="">Lorem Ipsum</div>
-              <div className="">Lorem Ipsum</div>
+            <div className="text-subtext1 flex flex-col md:flex-row gap-2 ">
+              <div className="bg-crust rounded-md flex flex-grow p-2 ">
+                <div className="my-auto ">
+                  {props.desc}
+                </div>
+              </div>
+              <div className="flex flex-row md:flex-col gap-2">
+                <div className="bg-crust rounded-md p-2 flex-grow">
+                  <Tools project={props.name} />
+                </div>
+                <div className="bg-crust rounded-md p-2 flex-grow">
+                  <Contributors project={props.name} />
+                </div>
+              </div>
+            </div>
+            <div className="flex md:flex-row flex-col gap-2 text-center w-full mb-2 mx-auto justify-center">
+              <a href={props.more} className="rounded-md bg-surface0 hover:bg-surface1 p-2">Learn More</a>
+              <a href={props.url} className="rounded-md bg-surface0 hover:bg-surface1 p-2">Check out the Project</a>
             </div>
           </div>
         </div>

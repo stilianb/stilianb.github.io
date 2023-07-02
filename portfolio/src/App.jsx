@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useState } from "react";
+import React, { useLayoutEffect, useState, useRef, useEffect } from "react";
 import DefaultCard from "./components/ProjectComponents/Cards/DefaultCard";
 import ProjectCard from "./components/ProjectComponents/Cards/ProjectCard";
 import AltCard from "./components/ProjectComponents/Cards/AltCard";
@@ -14,6 +14,8 @@ import {
   TEASER_A,
   TEASER_B,
 } from "./constants/ProjectInfo";
+import cliqebaitIMG from "./assets/CliquebaitIMG.png";
+import ProjectButton from "./components/ProjectComponents/ProjectButton";
 
 function App() {
   let [activeCard, setActiveCard] = useState("default");
@@ -24,121 +26,118 @@ function App() {
     setLightMode(!lightMode);
   };
 
+  React.useEffect(() => {
+    lightMode
+      ? (document.body.style.backgroundColor = "#1e1e2e")
+      : (document.body.style.backgroundColor = "#eff1f5");
+  });
+
   const ToggleProjects = () => {
     setActive(!isActive);
   };
 
   function ToggleCard(card) {
     activeCard === card ? setActiveCard("default") : setActiveCard(`${card}`);
-    if (card !== "default") {
-      setActive(!isActive);
-    }
   }
 
   return (
     <>
-      <div
-        className={`${lightMode ? "mocha" : "latte"
-          } bg-black h-screen w-full text-text overflow-auto`}
-      >
-        <div className="h-full w-full flex flex-col md:flex-row p-4 gap-4 md:justify-center ">
-          <div className="flex-grow relative max-w-3xl h-full md:my-auto ">
-            <DefaultCard name={activeCard} />
-            <ProjectCard
-              card={activeCard}
-              name={PROJECTA_NAME}
-              teas={TEASER_A}
-              desc={DESCRIPTION_A}
-            />
-            <ProjectCard
-              card={activeCard}
-              name={PROJECTB_NAME}
-              teas={TEASER_B}
-              desc={DESCRIPTION_B}
-            />
-            <AltCard card={activeCard} name={PROJECTC_NAME} />
-            <AltCard card={activeCard} name={PROJECTD_NAME} />
-          </div>
-          <div className="fixed bottom-4 right-4 md:relative h-fit my-auto flex flex-col">
-            <div className={`${isActive ? "opacity-100" : "opacity-0 md:opacity-100"} ml-11 md:ml-6 px-2 bg-mantle w-fit rounded-t-md`}>
-              Projects
+      <div className={`${lightMode ? "mocha" : "latte"} text-text relative`}>
+        <div className={`h-screen flex max-w-[1080px] mx-auto gap-2 p-2`}>
+          <div className="flex-grow w-full relative flex">
+            <div
+              className={`${isActive ? "opacity-100" : "opacity-50"
+                } translate-all duration-200 h-full absolute bg-mantle rounded-md w-full overflow-auto `}
+              onClick={isActive ? undefined : ToggleProjects}
+            >
+              <DefaultCard card={activeCard} />
+              <ProjectCard
+                card={activeCard}
+                name={PROJECTA_NAME}
+                teas={TEASER_A}
+                desc={DESCRIPTION_A}
+                more={
+                  "https://docs.google.com/presentation/d/1TvB-P4ES_shrCvMDLLGPOsVl7jnPb_X3fgrkiGYLBXE/edit?usp=sharing"
+                }
+                url={"https://github.com/CliqBait/main"}
+                image={cliqebaitIMG}
+              />
+              <ProjectCard
+                card={activeCard}
+                name={PROJECTB_NAME}
+                teas={TEASER_B}
+                desc={DESCRIPTION_B}
+              />
+              <AltCard card={activeCard} name={PROJECTC_NAME} />
             </div>
-            <div className="md:bg-mantle md:ml-4 md:p-2 md:rounded-md relative">
+            <div
+              className={`${isActive
+                ? "max-w-[45px] md:max-w-[60px] max-h-[45px] md:max-h-[60px] overflow-hidden"
+                : "max-w-[335px] md:max-w-[600px] max-h-[450px]"
+                } bg-crust rounded-md absolute w-full h-full drop-shadow-lg bottom-16 right-10 md:right-14 translate-all duration-[200ms]`}
+              onMouseEnter={isActive ? ToggleProjects : undefined}
+              onMouseLeave={isActive ? undefined : ToggleProjects}
+            >
+              <div
+                className={`${isActive ? "top-3 opacity-0" : "-top-3 delay-[400ms]"
+                  } absolute translate-all duration-200 overflow-hidden h-full max-h-[40px] left-6 bg-mantle px-2 pt-1 rounded-t-md`}
+              >
+                Projects
+              </div>
               <div
                 className={`${isActive
-                    ? "opacity-100"
-                    : "hidden md:block opacity-0 md:opacity-100"
-                  } translate-all duration-100 hover:cursor-pointer hover:text-blue overflow-hidden absolute text-3xl md:text-lg right-4 -top-8 md:-top-4 bg-crust rounded-t-md px-3`}
-                onClick={ToggleMode}
+                  ? "opacity-0 delay-0 duration-0"
+                  : "opacity-100 delay-200"
+                  } translate-all duration-200 h-full flex flex-col`}
               >
-                <i className="fa-solid fa-moon"></i>
-              </div>
-              <div className="flex ">
-                <div className=" my-auto md:hidden ml-auto">
-                  <div
-                    className="bg-pink text-base p-4 rounded-l-md flex gap-2"
-                    onClick={ToggleProjects}
-                  >
-                    <i
-                      className={`${isActive ? "fa-solid fa-x" : "fa-solid fa-bars"
-                        } my-auto `}
-                    ></i>
+                <div className="p-2 bg-mantle z-50 rounded-md m-4 ">
+                  <div className="md:max-h-[312px] overflow-auto ">
+                    <div className="" onClick={() => ToggleCard(PROJECTA_NAME)}>
+                      <ProjectButton
+                        card={activeCard}
+                        project={PROJECTA_NAME}
+                      />
+                    </div>
+                    <div className="" onClick={() => ToggleCard(PROJECTB_NAME)}>
+                      <ProjectButton
+                        card={activeCard}
+                        project={PROJECTB_NAME}
+                      />
+                    </div>
+                    <div className="" onClick={() => ToggleCard(PROJECTC_NAME)}>
+                      <ProjectButton
+                        card={activeCard}
+                        project={PROJECTC_NAME}
+                      />
+                    </div>
+                    <div className="" onClick={() => ToggleCard(PROJECTD_NAME)}>
+                      <ProjectButton
+                        card={activeCard}
+                        project={PROJECTD_NAME}
+                      />
+                    </div>
                   </div>
                 </div>
-                <div
-                  className={`${isActive
-                      ? "max-w-[500px] p-2"
-                      : "max-w-0 md:max-w-[500px] w-full px-0"
-                    } bg-crust py-2 md:p-2  lg:max-h-fit whitespace-nowrap rounded-l-md overflow-auto flex gap-2 flex-col translate-all duration-200`}
-                >
-                  <button
-                    className={`${activeCard === PROJECTA_NAME
-                        ? "bg-surface2"
-                        : "bg-surface0"
-                      } hover:bg-surface1 border-surface1`}
-                    onClick={() => ToggleCard(`${PROJECTA_NAME}`)}
-                  >
-                    {PROJECTA_NAME}
-                  </button>
-                  <button
-                    className={`${activeCard === PROJECTB_NAME
-                        ? "bg-surface2"
-                        : "bg-surface0"
-                      } hover:bg-surface1 border-surface1`}
-                    onClick={() => ToggleCard(`${PROJECTB_NAME}`)}
-                  >
-                    {PROJECTB_NAME}
-                  </button>
-                  <button
-                    className={`${activeCard === PROJECTC_NAME
-                        ? "bg-surface2"
-                        : "bg-surface0"
-                      } hover:bg-surface1 border-surface1`}
-                    onClick={() => ToggleCard(`${PROJECTC_NAME}`)}
-                  >
-                    {PROJECTC_NAME}
-                  </button>
-                  <button
-                    className={`${activeCard === PROJECTD_NAME
-                        ? "bg-surface2"
-                        : "bg-surface0"
-                      } hover:bg-surface1 border-surface1`}
-                    onClick={() => ToggleCard(`${PROJECTD_NAME}`)}
-                  >
-                    {PROJECTD_NAME}
-                  </button>
+                <div className="h-full flex">
+                  <div className="m-auto flex gap-2">
+                    <div className="h-fit my-auto">Get in Touch:</div>
+                    <div className="flex gap-2 text-xl">
+                      <a href="#" className=""><i className="fa-brands fa-github"></i></a>
+                      <a href="#" className=""><i className="fa-brands fa-linkedin"></i></a>
+                      <a href="#" className=""><i className="fa-solid fa-envelope"></i></a>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div className="hidden md:flex gap-1 justify-evenly text-2xl mt-2 bg-crust rounded-md p-2">
-                <a href="#" className="">
-                  <i className="fa-brands fa-github my-auto"></i>
-                </a>
-                <a href="#" className="">
-                  <i className="fa-brands fa-linkedin"></i>
-                </a>
-                <a href="#" className="">
-                  <i className="fa-solid fa-envelope"></i>
-                </a>
+              <div
+                className={`${isActive ? "" : ""
+                  } w-fit absolute bottom-1.5 right-3`}
+                onClick={ToggleProjects}
+              >
+                <i
+                  className={`${isActive ? "" : "rotate-45 "
+                    } hover:cursor-pointer translate-all duration-200 fa-solid fa-plus text-2xl`}
+                ></i>
               </div>
             </div>
           </div>
