@@ -17,11 +17,9 @@ export const CONTRIBUTORS_A = [
 
 export const PROJECTB_NAME = "project 2";
 export const TEASER_B = "project 2 teaser";
-export const DESCRIPTION_B = "project 2 description";
-
+export const DESCRIPTION_B = "image and content updates, building campaign specific pages, general live maintenance, ";
 export const TOOLS_B = [
 ];
-
 export const CONTRIBUTORS_B = [
   { name:"", url:"", key:5543},
 ];

@@ -7,12 +7,13 @@ function DefaultCard(props) {
       className={`${isActive ? "opacity-100" : "opacity-0"
         } absolute w-full h-full flex flex-col`}
     >
-      <div className="h-[75%] m-auto w-fit md:pl-0 flex flex-col ">
-        <h2 className="text-2xl text-subtext0 ml-1">Hi, I'm</h2>
-        <h1 className="text-5xl">Stilian Balasopoulov</h1>
-        <p className="ml-3 text-subtext0">A webdev based in Colorado.</p>
-        <div className="flex-grow flex flex-col md:flex-row">
+      <div className="h-[75%] md:h-full w-5/6 flex flex-col justify-center mx-auto gap-8">
+        <div className="flex flex-col ">
+          <div className="ml-1 text-subtext0 text-2xl">Hi, I'm</div>
+          <div className="text-5xl md:text-6xl ">Stilian Balasopoulov</div>
+          <div className="ml-3 text-subtext0 text-xl">a webdev based in Colorado.</div>
         </div>
+        <div className="ml-3 text-subtext1">desc</div>
       </div>
     </div>
   );
