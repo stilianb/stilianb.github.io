@@ -1,21 +1,24 @@
 "use client";
-import { motion, AnimatePresence } from 'framer-motion'
-import React from 'react'
+import { LazyMotion, domAnimation, m} from "framer-motion";
+import { usePathname } from "next/navigation";
+import React, { useState } from "react";
 
 function Transition({ children }) {
+  const currentPath = usePathname();
+
   return (
-    <AnimatePresence>
-      <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      exit={{ opacity: 0}}
-      className="flex w-full "
+  <LazyMotion features = {domAnimation}>
+      <m.main
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        key={currentPath}
+        className="h-full w-full flex"
       >
         {children}
-      </motion.div>
-    </AnimatePresence>
-  )
+      </m.main>
+      </LazyMotion>
+  );
 }
 
-export default Transition
+export default Transition;
