@@ -1,0 +1,20 @@
+[
+  {
+    "name": "GitHub",
+    "url": "#",
+    "class": "fa-brands fa-github",
+    "key": "github-social"
+  },
+  {
+    "name": "LinkedIn",
+    "url": "#",
+    "class": "fa-brands fa-linkedin",
+    "key": "linkedin-social"
+  },
+  {
+    "name": "Email",
+    "url": "#",
+    "class": "fa-solid fa-envelope",
+    "key": "email-social"
+  }
+]
