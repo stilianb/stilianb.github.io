@@ -14,8 +14,12 @@ function SideProjects() {
         require their own page. Most include projects from my degree or personal
         configurations for my environment.
       </p>
-      <div className="bg-mantle md:p-2 rounded-md flex-grow overflow-auto">
+      <div className="bg-mantle md:p-2 rounded-md overflow-auto">
         <ListMenu items={sideProjects} />
+      </div>
+      <div className="text-2xl">Open Source Contributions</div>
+      <div className="bg-mantle md:p-2 rounded-md overflow-auto">
+        wip
       </div>
     </div>
   );

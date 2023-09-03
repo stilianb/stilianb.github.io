@@ -10,8 +10,22 @@
   {
     "name": "Muddy Town",
     "languages": ["Python"],
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum at varius vel pharetra vel turpis nunc. At erat pellentesque adipiscing commodo. A diam sollicitudin tempor id eu. In nisl nisi scelerisque eu ultrices vitae auctor. Placerat orci nulla pellentesque dignissim enim sit amet. Euismod lacinia at quis risus sed vulputate odio ut enim. Ac auctor augue mauris augue. Pulvinar etiam non quam lacus suspendisse faucibus interdum posuere lorem. Nulla aliquet porttitor lacus luctus accumsan tortor posuere ac. Id donec ultrices tincidunt arcu. Nisl nisi scelerisque eu ultrices vitae auctor eu augue.",
-    "url": "#",
+    "description": "Muddy Town is a representation of a town made up of streets and buildings. In this project we use a python adaptation of Kruskal's in order to determine the most effective street to pave.",
+    "url": "https://github.com/stilianb/MuddyTown",
     "key": 1112
+  },
+  {
+    "name": "Sudoku Solver",
+    "languages": ["Scala"],
+    "description": "wip",
+    "url": "",
+    "key": 1113
+  },
+  {
+    "name": "Expert System",
+    "languages": ["Prolog"],
+    "description": "wip",
+    "url": "",
+    "key": 1114
   }
 ]

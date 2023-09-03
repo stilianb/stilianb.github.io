@@ -43,8 +43,8 @@ function CliqueBait() {
             <h2 className="text-2xl text-subtext0">In Collaboration With</h2>
             <ul className="text-sm text-subtext0 p-2">
               {teamInfo.map((member) => (
-                <li className="">
-                  <Link href={member.url} className="">
+                <li className="group">
+                  <Link href={member.url} className="group-hover:text-blue transition-all">
                     {member.name}
                   </Link>
                 </li>
