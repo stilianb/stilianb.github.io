@@ -1,22 +1,32 @@
-import './globals.css'
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import "./globals.css";
+import type { Metadata } from "next";
+import Script from "next/script";
+import { Inter } from "next/font/google";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Stilian Balasopoulov',
-  description: 'My Portfolio',
-}
+  title: "Stilian Balasopoulov",
+  description: "My Portfolio",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <Script
+        src="https://kit.fontawesome.com/5dffb3fca8.js"
+        crossorigin="anonymous"
+      />
+      <body className={`${inter.className} mocha bg-crust`}>
+      {children}
+      <div className="text-subtext1 absolute bottom-0 right-0 m-2 text-xs">
+        Thanks to <a href="https://github.com/catppuccin" className="text-blue">@Catppucin</a> 
+      </div>
+      </body>
     </html>
-  )
+  );
 }

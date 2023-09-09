@@ -2,7 +2,7 @@ import Card from "./components/Card";
 
 export default function Home() {
   return (
-    <main className="border h-screen flex">
+    <main className="h-screen flex p-2 ">
       <Card />
     </main>
   )

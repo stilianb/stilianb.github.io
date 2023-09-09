@@ -1,0 +1,35 @@
+[
+  {
+    "name":"BCI Edge",
+    "ghlink":"#",
+    "desc": "A dynamic NextJS web application for BCI",
+    "tags": ["NextJS"],
+    "key":"bcikey"
+  },
+  {
+    "name":"CliqueBait",
+    "ghlink":"#",
+    "desc": "A Full-stack social media aggregator for Android.",
+    "tags": ["Kotlin", "Open Source"],
+    "contrib": ["Cameron Colliver", "Joe Gunter", "JR Alexandar", "Stilian Balasopoulov"],
+    "key":"cbkey"
+  },
+  {
+    "name":"Prolog Expert System",
+    "ghlink":"#",
+    "tags": ["Prolog"],
+    "key":"ESkey"
+  },
+  {
+    "name":"Sudoku Solver",
+    "ghlink":"#",
+    "tags": ["Scala"],
+    "key":"sudokukey"
+  },
+  {
+    "name":"My Environment",
+    "ghlink":"#",
+    "tags": ["Lua", "nvim"],
+    "key":"nvimkey"
+  }
+]
