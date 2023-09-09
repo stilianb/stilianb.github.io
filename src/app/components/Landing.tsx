@@ -9,7 +9,7 @@ function Landing() {
         <div className="relative h-[400px] w-full m-2 m-auto">
           <div className="h-fit absolute rounded-full right-0 m-4 flex">
             <div className="bg-crust rounded-full overflow-hidden w-fit z-30 m-2">
-              <Image src={photo} width={`300`} className="opacity-0" alt="photo of me"/>
+              <Image src={photo} width={300} height={300} className="opacity-0" alt="photo of me"/>
             </div>
             <div className="bg-base h-full w-full absolute top-0 z-20 rounded-full animate-pulse"></div>
           </div>
