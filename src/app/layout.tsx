@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <Script
         src="https://kit.fontawesome.com/5dffb3fca8.js"
-        crossorigin="anonymous"
+        crossOrigin="anonymous"
       />
       <body className={`${inter.className} mocha bg-crust`}>
         {children}

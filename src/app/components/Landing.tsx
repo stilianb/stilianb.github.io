@@ -14,7 +14,7 @@ function Landing() {
             <div className="bg-base h-full w-full absolute top-0 z-20 rounded-full animate-pulse"></div>
           </div>
           <div className="z-30 absolute bottom-0 left-0 m-3 md:m-8 ">
-            <div className="text-subtext0 pl-2">Hi, I'm</div>
+            <div className="text-subtext0 pl-2">Hi, Im</div>
             <div className="text-6xl">
               <div className="">Stilian</div>
               <div className="">Balasopoulov</div>
@@ -25,7 +25,7 @@ function Landing() {
       </div>
       <div className="bg-mantle flex flex-col gap-4 p-2 rounded-md ">
         <div className="text-subtext1 ">
-          Thanks for visiting! I'm a software engineer from Seattle with a
+          Thanks for visiting! Im a software engineer from Seattle with a
           passion for web development and UX/UI design. Feel free to check out
           my work or get in touch.
         </div>

@@ -10,6 +10,7 @@ function Socials() {
             href={`${item.url}`}
             target="_blank"
             className="w-full bg-crust rounded-md flex p-1 hover:bg-surface0 transition-all"
+            key={item.key}
           >
             <i className={`fa-brands ${item.icon} text-xl m-auto`}></i>
           </a>

@@ -1,6 +1,7 @@
+"use client";
 import React from "react";
 
-function Button(props) {
+function Button(props: any) {
   return (
     <div className="border">
       <a

@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 
-function ProjectCard(props) {
+function ProjectCard(props: any) {
   const [isActive, setActive] = useState("close");
 
   const OpenCard = () => {
@@ -19,7 +19,7 @@ function ProjectCard(props) {
           ? "h-[300px] "
           : "h-[60px] overflow-hidden hover:bg-base"
       } transition-all bg-crust rounded-md relative`}
-      onClick={isActive === "close" ? OpenCard : null}
+      onClick={isActive === "close" ? OpenCard : undefined}
     >
       <a
         href="#"
@@ -35,7 +35,7 @@ function ProjectCard(props) {
       <div className="flex justify-between p-2 h-[60px]">
         <div className="my-auto md:text-lg">{props.name}</div>
         <div className="my-auto flex gap-2">
-          {props.tags.map((tag) => (
+          {props.tags.map((tag: String) => (
             <div
               className={`
               ${tag === "NextJS" ? "bg-maroon" : ""} 
@@ -46,7 +46,7 @@ function ProjectCard(props) {
               ${tag === "Lua" ? "bg-lavender" : ""} 
               ${tag === "nvim" ? "bg-peach" : ""} 
               ${tag === "python" ? "bg-flamingo" : ""} 
-              text-xs rounded-full px-1 text-base`}
+              text-xs rounded-full px-1 text-base`} key={`${tag}tag`}
             >
               {tag}
             </div>
@@ -76,14 +76,14 @@ function ProjectCard(props) {
         <div className="text-sm md:text-[16px] lg:text-[18px]">{props.desc}</div>
         <div className="flex flex-col gap-1">
           <div className="text-sm ">
-            {props.contrib ? "Collaborators:" : null}
+            {props.contrib ? "Collaborators:" : undefined}
           </div>
           <div className="truncate">
             {props.contrib
-              ? props.contrib.map((contributor) => (
-                  <div className="text-xs md:text-sm">{contributor}</div>
+              ? props.contrib.map((contributor: String) => (
+                  <div className="text-xs md:text-sm" key={`${contributor}tag`}>{contributor}</div>
                 ))
-              : null}
+              : undefined}
           </div>
         </div>
       </div>

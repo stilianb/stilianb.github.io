@@ -9,18 +9,17 @@ function Projects() {
       <Socials />
       <div className="bg-mantle rounded-md flex overflow-auto flex-col gap-2 p-2 h-full relative ">
         <div className="p-1 bg-crust rounded-md text-center w-full ">
-          Stuff I've worked on
+          Stuff Ive worked on
         </div>
         <div className="rounded-md flex-grow flex flex-col gap-2 z-20">
           {projects.map((project) => (
-            <div className="">
               <ProjectCard
                 name={project.name}
                 desc={project.desc}
                 contrib={project.contrib}
                 tags={project.tags}
+                key={project.key}
               />
-            </div>
           ))}
         </div>
       </div>
