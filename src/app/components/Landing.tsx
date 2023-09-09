@@ -2,14 +2,14 @@ import React from "react";
 import Image from "next/image";
 import photo from "../images/test(1).jpg";
 
-function Landing(props) {
+function Landing() {
   return (
     <div className="flex flex-col gap-2 w-full p-2 pb-0 md:pb-2 md:pr-0">
       <div className="bg-mantle rounded-md flex-grow relative flex flex-col min-h-[350px] ">
         <div className="relative h-[400px] w-full m-2 m-auto">
           <div className="h-fit absolute rounded-full right-0 m-4 flex">
             <div className="bg-crust rounded-full overflow-hidden w-fit z-30 m-2">
-              <Image src={photo} width={`300`} className="opacity-0" />
+              <Image src={photo} width={`300`} className="opacity-0" alt="photo of me"/>
             </div>
             <div className="bg-base h-full w-full absolute top-0 z-20 rounded-full animate-pulse"></div>
           </div>
