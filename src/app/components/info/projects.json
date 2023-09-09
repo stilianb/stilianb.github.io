@@ -1,35 +1,51 @@
 [
   {
-    "name":"BCI Edge",
-    "ghlink":"#",
-    "desc": "A dynamic NextJS web application for BCI",
+    "name": "BCI Edge",
+    "ghlink": "#",
+    "desc": "In order to bring BCI's website up to date with current web development standards, I recreated the site using NextJS allowing for easy expansion to any future developers.",
     "tags": ["NextJS"],
-    "key":"bcikey"
+    "key": "bcikey"
   },
   {
-    "name":"CliqueBait",
-    "ghlink":"#",
-    "desc": "A Full-stack social media aggregator for Android.",
+    "name": "CliqueBait",
+    "ghlink": "#",
+    "desc": "A Full-stack social media aggregator for the Android platform. This was created for my Senior Capstone at MSU Denver over the course of 1 semester.",
     "tags": ["Kotlin", "Open Source"],
-    "contrib": ["Cameron Colliver", "Joe Gunter", "JR Alexandar", "Stilian Balasopoulov"],
-    "key":"cbkey"
+    "contrib": [
+      "Cameron Colliver",
+      "Joe Gunter",
+      "JR Alexandar"
+    ],
+    "key": "cbkey"
   },
   {
-    "name":"Prolog Expert System",
-    "ghlink":"#",
+    "name": "Expert System",
+    "ghlink": "#",
+    "desc": "This Expert System asks for the user's Meyers-Brigg's personality type and then recommmends a TV show based on the given results.",
+    "contrib": ["Cameron Colliver"],
     "tags": ["Prolog"],
-    "key":"ESkey"
+    "key": "ESkey"
   },
   {
-    "name":"Sudoku Solver",
-    "ghlink":"#",
+    "name": "Functional Sudoku Solver",
+    "ghlink": "#",
+    "desc": "When given a textfile containing an unsolved sudoku puzzle, this program solves the puzzle using only functional programming practices.",
+    "contrib": ["Cameron Colliver"],
     "tags": ["Scala"],
-    "key":"sudokukey"
+    "key": "sudokukey"
   },
   {
-    "name":"My Environment",
-    "ghlink":"#",
+    "name": "My Environment",
+    "ghlink": "https://github.com/stilianb/.dotfiles",
+    "desc": "All of my main dotfiles for environment configuration including neovim, tmux, and fish. Posted version is meant for reference and backups if needed.",
     "tags": ["Lua", "nvim"],
-    "key":"nvimkey"
+    "key": "nvimkey"
+  },
+  {
+    "name": "stilianb.github.io",
+    "ghlink": "#",
+    "desc": "A NextJS webapp using TailwindCSS and the Catppuccin color scheme.",
+    "tags": ["NextJS"],
+    "key": "foliokey"
   }
 ]

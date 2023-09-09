@@ -22,10 +22,13 @@ export default function RootLayout({
         crossorigin="anonymous"
       />
       <body className={`${inter.className} mocha bg-crust`}>
-      {children}
-      <div className="text-subtext1 absolute bottom-0 right-0 m-2 text-xs">
-        Thanks to <a href="https://github.com/catppuccin" className="text-blue">@Catppucin</a> 
-      </div>
+        {children}
+        <div className="text-subtext1 fixed bottom-0 right-4 text-xs opacity-50 hover:opacity-100 transition-all">
+          Thanks to{" "}
+          <a href="https://github.com/catppuccin" className="text-blue ">
+            @Catppuccin
+          </a>
+        </div>
       </body>
     </html>
   );
