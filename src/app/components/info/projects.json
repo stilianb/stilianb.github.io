@@ -1,36 +1,36 @@
 [
   {
     "name": "BCI Edge",
-    "ghlink": "#",
+    "ghlink": "https://github.com/stilianb/bciedge",
     "desc": "In order to bring BCI's website up to date with current web development standards, I recreated the site using NextJS allowing for easy expansion to any future developers.",
     "tags": ["NextJS"],
     "key": "bcikey"
   },
   {
     "name": "CliqueBait",
-    "ghlink": "#",
+    "ghlink": "https://github.com/CliqBait",
     "desc": "A Full-stack social media aggregator for the Android platform. This was created for my Senior Capstone at MSU Denver over the course of 1 semester.",
     "tags": ["Kotlin", "Open Source"],
     "contrib": [
-      "Cameron Colliver",
-      "Joe Gunter",
-      "JR Alexandar"
+      ["Cameron Colliver", "https://github.com/SanguineOrange"],
+      ["Joe Gunter", "https://github.com/JoeSGunter"],
+      ["JR Alexandar", "https://github.com/halexan7"]
     ],
     "key": "cbkey"
   },
   {
     "name": "Expert System",
-    "ghlink": "#",
+    "ghlink": "https://github.com/stilianb/prolog-es-tvrecommendations",
     "desc": "This Expert System asks for the user's Meyers-Brigg's personality type and then recommmends a TV show based on the given results.",
-    "contrib": ["Cameron Colliver"],
+    "contrib": [["Cameron Colliver", "https://github.com/SanguineOrange"]],
     "tags": ["Prolog"],
     "key": "ESkey"
   },
   {
     "name": "Functional Sudoku Solver",
-    "ghlink": "#",
+    "ghlink": "https://github.com/stilianb/scala-sudoku-solver",
     "desc": "When given a textfile containing an unsolved sudoku puzzle, this program solves the puzzle using only functional programming practices.",
-    "contrib": ["Cameron Colliver"],
+    "contrib": [["Cameron Colliver", "https://github.com/SanguineOrange"]],
     "tags": ["Scala"],
     "key": "sudokukey"
   },
@@ -43,7 +43,7 @@
   },
   {
     "name": "stilianb.github.io",
-    "ghlink": "#",
+    "ghlink": "https://github.com/stilianb/stilianb.github.io",
     "desc": "A NextJS webapp using TailwindCSS and the Catppuccin color scheme.",
     "tags": ["NextJS"],
     "key": "foliokey"
