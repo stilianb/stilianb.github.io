@@ -46,7 +46,8 @@ function ProjectCard(props: any) {
               ${tag === "Lua" ? "bg-lavender" : ""} 
               ${tag === "nvim" ? "bg-peach" : ""} 
               ${tag === "python" ? "bg-flamingo" : ""} 
-              text-xs rounded-full px-1 text-base`} key={`${tag}tag`}
+              text-xs rounded-full px-1 text-base`}
+              key={`${tag}tag`}
             >
               {tag}
             </div>
@@ -73,15 +74,24 @@ function ProjectCard(props: any) {
         ></hr>
       </div>
       <div className={`${isActive === "open" ? "" : ""} p-4 flex gap-4`}>
-        <div className="text-sm md:text-[16px] lg:text-[18px]">{props.desc}</div>
+        <div className="text-sm md:text-[16px] lg:text-[18px]">
+          {props.desc}
+        </div>
         <div className="flex flex-col gap-1">
           <div className="text-sm ">
             {props.contrib ? "Collaborators:" : undefined}
           </div>
-          <div className="truncate">
+          <div className="truncate flex flex-col">
             {props.contrib
               ? props.contrib.map((contributor: String) => (
-                  <div className="text-xs md:text-sm" key={`${contributor}tag`}>{contributor}</div>
+                  <a
+                    href={`${contributor[1]}`}
+                    target="_blank"
+                    className="text-xs md:text-sm hover:text-blue transition-all"
+                    key={`${contributor[0]}tag`}
+                  >
+                    {contributor[0]}
+                  </a>
                 ))
               : undefined}
           </div>
