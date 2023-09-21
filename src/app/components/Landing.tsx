@@ -37,7 +37,7 @@ function Landing() {
             Get In Touch
           </a>
           <a
-            href="https://drive.google.com/file/d/1MgcZqxD54FVuN_g6vF4grv19bIH1jHi-/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1BX_8ycsGjGpwAfUMlRZVT1bVYraoQyiT/view?usp=sharing"
             target="_blank"
             className="bg-crust hover:bg-surface0 transition-all rounded-md p-1 w-full text-center"
           >
