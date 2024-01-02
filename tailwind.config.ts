@@ -10,5 +10,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@catppuccin/tailwindcss")],
 } satisfies Config;

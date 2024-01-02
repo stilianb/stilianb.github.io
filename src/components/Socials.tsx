@@ -2,7 +2,12 @@ import React from 'react'
 
 function Socials() {
   return (
-    <div className="bg-gray-400 flex-grow">Socials</div>
+    <div className="bg-mantle flex-grow">
+      <div className="">github</div>
+      <div className="">linkedin</div>
+      <div className="">email</div>
+      <div className="">discord</div>
+    </div>
   )
 }
 
