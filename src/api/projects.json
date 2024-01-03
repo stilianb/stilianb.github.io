@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Test Project Name",
+    "tags": [
+      {
+        "name": "Test Tag 1",
+        "color": "bg-blue",
+        "key": "testblue"
+      },
+      {
+        "name": "tag3",
+        "color": "bg-red",
+        "key": "testred"
+      },
+      {
+        "name": "Tag3.10v2",
+        "color": "bg-green",
+        "key": "testgreen"
+      }
+    ],
+    "key": "test"
+  },
+  {
+    "name": "Test Project 2 Name",
+    "tags": [
+      {
+        "name": "Test Tag 1",
+        "color": "bg-blue",
+        "key": "test2blue"
+      },
+      {
+        "name": "tag3",
+        "color": "bg-red",
+        "key": "test2red"
+      },
+      {
+        "name": "Tag3.10v2",
+        "color": "bg-green",
+        "key": "test2green"
+      }
+    ],
+    "key": "test2"
+  }
+]

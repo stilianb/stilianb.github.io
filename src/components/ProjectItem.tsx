@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import Tag from "./Tag";
+import ExpandedProject from "./ExpandedProject";
 
-function ProjectItem() {
+function ProjectItem(props: any) {
   const [isActive, setActive] = useState("close");
 
   const OpenProject = () => {
@@ -19,8 +21,8 @@ function ProjectItem() {
       >
         <div
           className={`${isActive === "open"
-              ? "opacity-100"
-              : "pointer-events-none opacity-0"
+            ? "opacity-100"
+            : "pointer-events-none opacity-0"
             } fixed left-0 top-0 flex h-full w-full transition-all`}
         >
           <div
@@ -31,15 +33,21 @@ function ProjectItem() {
           <div
             className={`${isActive === "open" ? "opacity-100" : "opacity-0"
               } z-10 m-6 w-full rounded-md bg-crust transition-all`}
-          ></div>
+          >
+            <ExpandedProject name={props.name} />
+          </div>
         </div>
         <div className="flex justify-between">
-          <div className="">Name</div>
-          <div className="text-xs items-center">tags</div>
+          <div className="">{props.name}</div>
+          <div className="flex gap-1">
+            {props.tags.map((i: any) => (
+              <Tag name={i.name} color={i.color} key={i.key} />
+            ))}
+          </div>
         </div>
       </div>
-      <div className="rounded-md bg-surface0 p-2 hover:cursor-pointer hover:bg-surface1">
-        i
+      <div className="flex min-w-[55px] items-center justify-center rounded-md bg-surface0 hover:cursor-pointer hover:bg-surface1">
+        <i className="fa-brands fa-github text-xl"></i>
       </div>
     </div>
   );
