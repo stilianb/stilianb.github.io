@@ -14,15 +14,15 @@ function ProjectItem(props: any) {
   };
 
   return (
-    <div className={`flex gap-2`}>
+    <div className={`flex gap-1`}>
       <div
         className={`flex-grow rounded-md bg-surface0 p-2 transition-all transition-all hover:cursor-pointer hover:bg-surface1`}
         onClick={isActive === "close" ? OpenProject : undefined}
       >
         <div
           className={`${isActive === "open"
-            ? "opacity-100"
-            : "pointer-events-none opacity-0"
+              ? "opacity-100"
+              : "pointer-events-none opacity-0"
             } fixed left-0 top-0 flex h-full w-full transition-all`}
         >
           <div
@@ -38,8 +38,8 @@ function ProjectItem(props: any) {
           </div>
         </div>
         <div className="flex justify-between">
-          <div className="">{props.name}</div>
-          <div className="flex gap-1">
+          <div className="flex flex-grow items-center">{props.name}</div>
+          <div className="flex flex-wrap md:flex-nowrap justify-end gap-1">
             {props.tags.map((i: any) => (
               <Tag name={i.name} color={i.color} key={i.key} />
             ))}
