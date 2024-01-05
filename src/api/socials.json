@@ -1,0 +1,26 @@
+[
+  {
+    "icon": "fa-brands fa-github",
+    "name": "GitHub",
+    "link": "#",
+    "key": "ghsocial"
+  },
+  {
+    "icon": "fa-brands fa-linkedin",
+    "name": "LinkedIn",
+    "link": "#",
+    "key": "lnsocial"
+  },
+  {
+    "icon": "fa-brands fa-discord",
+    "name": "Discord",
+    "link": "#",
+    "key": "dcsocial"
+  },
+  {
+    "icon": "fa-solid fa-envelope",
+    "name": "Email",
+    "link": "#",
+    "key": "mailsocial"
+  }
+]

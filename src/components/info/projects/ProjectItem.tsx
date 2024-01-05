@@ -37,7 +37,7 @@ function ProjectItem(props: any) {
             <ExpandedProject name={props.name} />
           </div>
         </div>
-        <div className="flex justify-between">
+        <div className="flex justify-between gap-2">
           <div className="flex flex-grow items-center">{props.name}</div>
           <div className="flex flex-wrap md:flex-nowrap justify-end gap-1">
             {props.tags.map((i: any) => (

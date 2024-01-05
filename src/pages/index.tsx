@@ -1,8 +1,9 @@
 import Head from "next/head";
 import Script from "next/script";
-import Landing from "~/components/Landing";
-import Projects from "~/components/Projects";
-import Socials from "~/components/Socials";
+import Landing from "~/components/landing/Landing";
+import Projects from "~/components/info/projects/Projects";
+import Socials from "~/components/info/socials/Socials";
+import Info from "~/components/info/Info";
 
 export default function Home() {
   return (
@@ -17,15 +18,8 @@ export default function Home() {
         crossorigin="anonymous"
       />
       <main className="mocha flex min-h-screen flex-col gap-2 bg-base p-2 text-text md:flex-row">
-        <div className="flex-grow rounded-md bg-crust p-2">
-          <Landing />
-        </div>
-        <div className="flex flex-grow flex-col gap-2 rounded-md bg-crust p-2">
-          <div className="h-full">
-            <Projects />
-          </div>
-          <Socials />
-        </div>
+        <Landing />
+        <Info />
       </main>
     </>
   );

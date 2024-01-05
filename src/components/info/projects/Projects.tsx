@@ -1,5 +1,5 @@
 import React from "react";
-import projects from "../api/projects.json";
+import projects from "../../../api/projects.json";
 import ProjectItem from "./ProjectItem";
 
 function Projects() {
