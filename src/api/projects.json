@@ -1,0 +1,44 @@
+[
+  {
+    "name": "CliqueBait",
+    "link": "https://github.com/CliqBait/main",
+    "tags": ["Kotlin", "Auth0"],
+    "desc": "A full stack social media management platform for Android.",
+    "key": "cbprojectkey"
+  },
+  {
+    "name": "Scribe-iOS",
+    "link": "https://github.com/scribe-org/Scribe-iOS",
+    "tags": ["Swift", "Open-Source"],
+    "desc": "An Open-Source keyboard plugin for language learners.",
+    "key": "skyprojectkey"
+  },
+  {
+    "name": "Video to Ascii",
+    "link": "https://github.com/stilianb/VideotoAscii",
+    "tags": ["Python", "OpenCV"],
+    "desc": "Converts images & video into ASCII art using python image processing tools.",
+    "key": "asciiprojectkey"
+  },
+  {
+    "name": "BCI Edge",
+    "link": "https://github.com/stilianb/bciedge",
+    "tags": ["NextJS", "Prisma"],
+    "desc": "Web platform for Basketball Club International (BCI)",
+    "key": "bciprojectkey"
+  },
+  {
+    "name": "MuddyTown",
+    "link": "https://github.com/stilianb/MuddyTown",
+    "tags": ["Python"],
+    "desc": "A solution to the Muddy Town problem using Kruskall's",
+    "key": "mtprojectkey"
+  },
+  {
+    "name": "pf tools",
+    "link": "https://github.com/stilianb/pfSpellbook",
+    "tags": ["NextJS", "Prisma", "Open-Source"],
+    "desc": "A manager for character creation in Pathfinder 1st edition.",
+    "key": "pftprojectkey"
+  }
+]

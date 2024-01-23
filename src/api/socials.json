@@ -1,0 +1,20 @@
+[
+  {
+    "icon": "fa-brands fa-github",
+    "name": "GitHub",
+    "link": "https://github.com/stilianb",
+    "key": "githubsocial"
+  },
+  {
+    "icon": "fa-brands fa-linkedin",
+    "name": "LinkedIn",
+    "link": "https://www.linkedin.com/in/stilianb/",
+    "key": "linkedinsocial"
+  },
+  {
+    "icon": "fa-solid fa-envelope",
+    "name": "Email",
+    "link": "mailto:stilian.mail@gmail.com",
+    "key": "emailsocial"
+  }
+]
